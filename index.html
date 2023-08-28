@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!--
+            This is the main page of the website
+            @author Jagraj Kaur
+            @date 20 March'2022
+        -->
+        <title>Fashion Boutique</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="./css/typography.css">
+        <link rel="stylesheet" href="./css/nav.css">
+        <link rel="stylesheet" href="./css/theme.css">
+        <link rel="stylesheet" href="./css/feature-section.css">
+        <link rel="stylesheet" href="./css/category-section.css">
+        <link rel="stylesheet" href="./css/trending-section.css">
+        <link rel="stylesheet" href="./css/footer.css">
+        
+
+    </head>
+
+    <body>
+        <header>
+            <nav>  
+                <!-- START :: LOGO SECTION -->
+                <div>
+                    <a href="#"><img src="./images/logo.png" class="logo-img" alt="FaSHCO"></a>
+                </div>
+                <!-- END :: LOGO SECTION -->
+
+                 <!-- START :: MENU OPTIONS -->
+                <div class="menu-label">
+                    <ul>
+                        <li><a href="#" class="label"> Home </a></li>
+                        <li class="menu-label">
+                            <a href="#category" class="label">Categories</a>
+                            <ul>
+                                <li><a href="#category" id="womens_wear_nav_id">Women's Wear</a></li>
+                                <li><a href="#category" id="mens_wear_nav_id">Men's Wear</a></li>
+                                <li><a href="#category" id="winter_wear_nav_id">Winter Collection</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#trending" class="label"> Trending </a></li>
+                    </ul>
+                </div>
+                <!-- END :: MENU OPTIONS -->
+
+                <!-- START :: ACTION BUTTONS -->
+                <div>
+                    <a href="#contact"><button class="btn btn-text">Contact</button></a>
+                    <a href="./login.html">
+                        <button class="btn btn-outlined">Log in</button>
+                    </a>
+                    <!-- Rajwant Kaur Add shopping cart button in top right corner -->
+                    <a href="./shopping-cart-224.html">
+                        <button class="btn btn-text" id="shopCart">Cart <span class="material-symbols-rounded shopping-icon">shopping_cart</span> </button>
+                    </a>
+                </div>
+                <!-- END :: MENU OPTIONS -->
+            </nav>
+        </header>
+
+        <!-- START :: TOP SECTION -->
+        <section class="feature-section">
+            <!-- COL 1 -->
+            <div class="tag-line-container col-6">
+
+                <div>
+                    <h5 class="headline text-white text-bold">
+                        Fashion Style<br/>Meet Perfection<br/>
+                    </h5>
+                    <p class="subhead-2 text-white">Created your own visual styles of fashion. Let it be<br/>
+                        unique for yourself and yet identifiable for others.<br/>
+                        Check out collection to show who you are. 
+                    </p>
+                </div>
+                <a href="#category"><button class="btn btn-primary">Explore Product <span class="material-symbols-rounded">arrow_outward</span></button></a>
+            </div>
+            <!-- COL 2 -->
+            <div class="col-3">
+                <img src="./images/mainPage/main-model-1.png" class="main-model-image-1" alt="Main model">
+                <h5 class="info-text text-white text-bold">5000 +</h5>
+                <h4 class="subhead-2 info-text-line text-white">Product Sold</h4>
+            </div>
+            <!-- COL 3 -->
+            <div class="col-3">
+                <img src="./images/mainPage/main-model-2.png" class="main-model-image-2" alt="Main model">
+            </div>
+
+        </section>
+        <!-- END :: TOP SECTION -->
+
+        <!-- Brands  || START -->
+        <section class="supported-brands">
+            <div class="d-flex brands">
+                <img src="./images/brands/ck.png" alt="brand" >
+                <img src="./images/brands/dg_logo_compact.png" alt="brand">
+                <img src="./images/brands/gucci.png" alt="brand">
+                <img src="./images/brands/EA7_White.png" alt="brand">
+                <img src="./images/brands/dior.png" alt="brand">
+            </div>
+        </section>
+        
+
+        <!-- START :: CATEGORY SECTION -->
+        <section id="category" class="category-section">
+            <div class="row">
+                <div class="col-12">
+                    <h6 class="display-1">Category <span id="sub_category"></span></h6>
+                </div>
+            </div>
+
+            <!-- Content loads with the help of JavaScript -->
+            <div class="category-options-list d-flex" id="sub_category-options"></div>
+
+            <div class="products-gallery" id="sub_product-images">
+                
+                <!-- END -->
+            </div>
+
+            <!-- HTML for the product card popup -->
+            <div class="product-card-popup" id="productCardPopup">
+                <div class="product-card-popup-content" id="productCardPopupContent">
+                    <!-- Product card HTML will be inserted here -->
+                </div>
+                <button class="product-card-popup-close btn btn-primary" id="productCardPopupClose">Close</button>
+            </div>
+
+            <div class="d-flex " style="justify-content: space-between; padding-left: 2em; padding-right: 2em;padding-top: 2em;">
+                <div class="d-flex align-item-center">
+                    <button class="btn btn-pager label btn-pager-active">
+                        01
+                    </button>
+                    <button class="btn btn-pager label">
+                        02
+                    </button>
+                    <button class="btn btn-pager label">
+                        03
+                    </button>
+                    <button class="btn btn-pager label">
+                        04
+                    </button>
+                    <button class="btn btn-pager label">
+                        05
+                    </button>
+                    <button class="btn btn-pager label">
+                        06
+                    </button>
+                </div>
+
+                <button class="scale-down-half btn btn-primary filled-on-hover">
+                    All products
+                </button>
+                
+            </div>
+
+        </section>
+        <!-- END :: CATEGORY SECTION -->
+
+        <!-- START :: Trending this month -->
+        <section id="trending" class="trending-section">
+            <h4 class="display-1">Trending This Month</h4>
+            <div class="trend-cards">
+                
+                <!-- CARD START -->
+                <div class="trend-card-outlined">
+                    <div class="card-body">
+                        <div>
+                            <p class="subhead-2">Carbon Blue - Formal</p>
+                            <p class="caption">Women elegent business suit set with long sleeve</p>
+                        </div>
+                
+                        <div class="quick-filters">
+                            <div>
+                                <p class="caption" style="line-height:0;">Price:</p>
+                                <p class="text-sm final-price" style="line-height:19px;">$115.00</p>
+                            </div>
+                
+                            <div>
+                                <p class="caption pl-1em" style="line-height:0;">Color:</p>
+                                <div class="d-flex" style="transform: scale(0.6);">
+                                    <div class="select-color selected-color bg-black"></div>
+                                    <div class="select-color  bg-orange"></div>
+                                    <div class="select-color bg-pink"></div>
+                                    <div class="select-color bg-rose"></div>
+                                </div>
+                            </div>
+                
+                            <div>
+                                <p class="caption" style="line-height:0;">Size:</p>
+                                <div class="d-flex size-options">
+                                    <span>S</span>
+                                    <span>M</span>
+                                    <span>L</span>
+                                    <span>XL</span>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div>
+                            <div class="d-flex">
+                                <button class="scale-down-half btn btn-primary btn-add-to-cart">Buy now</button>
+                                <button class="scale-down-half btn btn-icon filled-on-hover">
+                                    <span class="material-symbols-rounded color-pink ">
+                                        favorite
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-image">
+                        <img class="image-icon" src="./images/models/004.jpg" alt="prod-1">
+                    </div>
+                </div>
+                <!-- CARD END -->
+
+                <!-- CARD START -->
+                <div class="trend-card-outlined">
+                    <div class="card-body">
+                        <div>
+                            <p class="subhead-2">Carbon Black - Formal</p>
+                            <p class="caption">Women's round neck formal black dress.</p>
+                        </div>
+                
+                        <div class="quick-filters">
+                            <div>
+                                <p class="caption" style="line-height:0;">Price:</p>
+                                <p class="text-sm final-price" style="line-height:19px;">$115.00</p>
+                            </div>
+                
+                            <div>
+                                <p class="caption pl-1em" style="line-height:0;">Color:</p>
+                                <div class="d-flex" style="transform: scale(0.6);">
+                                    <div class="select-color selected-color bg-black"></div>
+                                    <div class="select-color  bg-orange"></div>
+                                    <div class="select-color bg-pink"></div>
+                                    <div class="select-color bg-rose"></div>
+                                </div>
+                            </div>
+                
+                            <div>
+                                <p class="caption" style="line-height:0;">Size:</p>
+                                <div class="d-flex size-options">
+                                    <span>S</span>
+                                    <span>M</span>
+                                    <span>L</span>
+                                    <span>XL</span>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div>
+                            <div class="d-flex">
+                                <button class="scale-down-half btn btn-primary btn-add-to-cart">Buy now</button>
+                                <button class="scale-down-half btn btn-icon filled-on-hover">
+                                    <span class="material-symbols-rounded color-pink ">
+                                        favorite
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-image">
+                        <img class="image-icon" src="./images/models/005.jpg" alt="prod-1">
+                    </div>
+                </div>
+                <!-- CARD END -->
+                
+            </div>
+        </section>
+        <!-- END :: Trending this month -->
+
+       
+
+        <footer>
+            <div class="d-flex">
+                <div class="col-6">
+                    <div class="footer-content">
+                        <h3>Fashion Boutique</h3>
+                        <p>Fashion is a form of self-expression that allows people to try on different identities and
+                            experiment with their apprearance. It can also be a way for individuals to show off their wealth 
+                            and social status.
+                        </p>
+                        <ul class="socials">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6" id="contact">
+                        <h3>Contact us</h3>
+                        <form action="#">
+                            <div class="d-flex">
+                                <div class="col-2 mt-1em"><label for="fname">Full Name:</label></div>
+                                <div class="col-10"><input type="text" id="fname" name="fullname" placeholder="Your name.."></div>
+                            </div>
+                             
+                            <div class="d-flex">
+                                <div class="col-2 mt-1em"><label for="country">Country:</label></div>
+                                <div class="col-10">
+                                    <select id="country" name="country" style="width: 64%;">
+                                        <option value="canada">Canada</option>
+                                        <option value="australia">Australia</option>
+                                        <option value="usa">USA</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex">
+                                <div class="col-2 mt-1em"><label for="subject">Subject: </label></div>
+                                <div class="col-10"><textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea></div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="col-2 mt-1em"></div>
+                                <div class="col-10"><button class="btn btn-primary">Submit</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>copyright &copy;2023 <a href="#">fashion boutique</a></p>
+                <div class="footer-menu">
+                    <ul class="f-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#category">Category</a></li>
+                        <li><a href="#trending">Trending</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+        <script type='text/javascript' src='./js/logicScript-330.js'></script>
+        <script type='text/javascript' src='./js/shopping-cart-224.js'></script>
+    </body>
+</html>
